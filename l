@@ -9,7 +9,7 @@
 	clear
 	echo ""
 	read -p "IP Server : " -e -i $IP IP
-	read -p "Port Server : " -e -i 1194 PORT
+	read -p "Port Server : " -e -i 443 PORT
 	read -p "Port Proxy : " -e -i 8080 PROXY
 	echo ""
 	echo -e " |${GRAY}1${NC}| UDP"
@@ -182,8 +182,14 @@ proto $PROTOCOL
 sndbuf 0
 rcvbuf 0
 remote $CLIENT 999 udp
-remote $IP:$PORT@anywhere.truevisions.tv.ps.line.naver.jp $PORT
-http-proxy $IP $PROXY
+remote $IP $PORT
+http-proxy-retry
+http-proxy $10.4.4.4 $PROXY
+
+http-proxy-option CUSTOM-HEADER Host line.naver.jp.m.facebook.com.line.me
+
+http-proxy-option CUSTOM-HEADER X-Online-Host line.naver.jp.m.facebook.com.line.me
+
 resolv-retry infinite
 nobind
 persist-key
@@ -350,7 +356,7 @@ END
 	fi
 
 
-	wget -O /usr/local/bin/menu "https://raw.githubusercontent.com/nwqionm/OPENEXTRA/master/Menu"
+	wget -O /usr/local/bin/menu "https://raw.githubusercontent.com/aritach/OPENEXTRA/master/Menu"
 	chmod +x /usr/local/bin/menu
 	apt-get -y install vnstat
 	
