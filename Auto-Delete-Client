@@ -4,7 +4,7 @@
 GRAY='\033[1;33m'
 NC='\033[0m'
 
-cat /etc/shadow | cut: -f1,8 | sed /:$/d > /usr/local/bin/Expire-List
+cat /etc/shadow | cut -d: -f1,8 | sed /:$/d > /usr/local/bin/Expire-List
 TOTALACCOUNTS=`cat /usr/local/bin/Expire-List | wc -l`
 for((i=1; i<=$TOTALACCOUNTS; i++ ))
 	do
