@@ -1,13 +1,12 @@
-
 #!/bin/bash
 
 GRAY='\033[1;33m'
 NC='\033[0m'
 
-cat /etc/shadow/usr/local/bin/Expire-List
+cat /etc/shadow | sed /:$/d > /usr/local/bin/Expire-List
 TOTALACCOUNTS=`cat /usr/local/bin/Expire-List | wc -l`
 for((i=1; i<=$TOTALACCOUNTS; i++ ))
-
+	
 
 	if [ $CLIENTEXPIREINSECONDS -ge $TODAYSTIME ] ; then
 		TIMETO1DAYS=$(( $TODAYSTIME + 86400 ))
