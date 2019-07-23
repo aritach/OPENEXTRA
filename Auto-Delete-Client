@@ -11,7 +11,7 @@ for((i=1; i<=$TOTALACCOUNTS; i++ ))
 	TCLIENTVAL=`head -n $i /usr/local/bin/Expire-List | tail -n 1`
 	CLIENT=`echo $TCLIENTVAL | cut -f1:`
 	CLIENTEXP=`echo $TCLIENTVAL | cut -f2:`
-	CLIENTEXPIREINSECONDS=$(( $CLIENTEXP * 86400 ))
+	
 	TODAYSTIME=`date +%s`
 
 	if [ $CLIENTEXPIREINSECONDS -ge $TODAYSTIME ] ; then
