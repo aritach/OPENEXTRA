@@ -11,31 +11,29 @@ IP=$(wget -4qO- "http://whatismyip.akamai.com/")
 
 # Color
 GRAY='\033[1;33m'
-GREEN='\033[0;32m'
+BLUE='\033[0;32m'
 NC='\033[0m'
 
 # Menu
 echo ""
-echo "  (\_(\ "
-echo " (=’ :’) :* Script by Mnm Ami"
-echo "  (,(”)(”) °.¸¸.•"
+echo "เซิฟเวอร์ โดย บอล"
 echo ""
 if [[ -e /usr/local/bin/Check-Thai ]]; then
-	echo -e "เมนูสคริปท์ ${GRAY}✿.｡.:* *.:｡✿*ﾟ’ﾟ･✿.｡.:*${NC}"
+	echo -e "เมนู ${PINK}O_O${NC}"
 	echo ""
 	echo -e "|${GRAY} 1${NC}| เพิ่มบัญชีผู้ใช้ OpenVPN"
 	echo -e "|${GRAY} 2${NC}| เพิ่มบัญชีผู้ใช้ SSH (HTTP)"
 	echo -e "|${GRAY} 3${NC}| ลบบัญชีผู้ใช้"
-	echo -e "|${GRAY} 4${NC}| ตรวจสอบบัญชีผู้ใช้ทั้งหมด และตรวจสอบบัญชีที่กำลังเชื่อมต่อ"
-	echo -e "|${GRAY} 5${NC}| เปลี่ยนรหัสผ่านบัญชีผู้ใช้"
-	echo -e "|${GRAY} 6${NC}| เปลี่ยนวันหมดอายุบัญชีผู้ใช้"
-	echo -e "|${GRAY} 7${NC}| ตั้งค่าเวลารีบูทเซิฟเวอร์อัตโนมัติ"
-	echo -e "|${GRAY} 8${NC}| ทดสอบความเร็วอินเตอร์เน็ต"
+	echo -e "|${GRAY} 4${NC}| บัญชีทั้้งหมด และ สมาชิกที่ออนไลน์"
+	echo -e "|${GRAY} 5${NC}| เปลี่ยนรหัสผ่านสมาชิก"
+	echo -e "|${GRAY} 6${NC}| เปลี่ยนวันหมดอายุสมาชิก"
+	echo -e "|${GRAY} 7${NC}| ตั้งค่าเวลาบำรุงรักษาเซิฟเวอร์"
+	echo -e "|${GRAY} 8${NC}| เช็คสปีดอินเตอร์เน็ต"
 	echo -e "|${GRAY} 9${NC}| -"
-	echo -e "|${GRAY}10${NC}| ตรวจสอบแบนด์วิดท์"
-	echo -e "|${GRAY}11${NC}| ตรวจสอบแบนด์วิดท์แบบรายชั่วโมง"
-	echo -e "|${GRAY}12${NC}| ตรวจสอบแบนด์วิดท์ต่อบัญชี"
-	echo -e "|${GRAY}13${NC}| ปรับเปลี่ยนระบบของเซิฟเวอร์"
+	echo -e "|${GRAY}10${NC}| ตรวจสอบการใช้งานทั้งหมดของสมาชิก"
+	echo -e "|${GRAY}11${NC}| ตรวจสอบการใช้งานของสมาชิกแบบรายชั่วโมง"
+	echo -e "|${GRAY}12${NC}| ตรวจสอบการใช้งานของสมาชิกแบบรายบุคคล"
+	echo -e "|${GRAY}13${NC}| เปลี่ยนระบบของเซิฟเวอร์"
 	if [[ $CHECKSYSTEM ]]; then
 		echo -e "|${GRAY}14${NC}| แบนและปลดแบนบัญชีผู้ใช้"
 	else
@@ -43,13 +41,13 @@ if [[ -e /usr/local/bin/Check-Thai ]]; then
 	fi
 	echo -e "|${GRAY}15${NC}| ปรับความเร็วอินเตอร์เน็ต"
 	echo -e "|${GRAY}16${NC}| เปิด-ปิด-รีสตาร์ท การทำงานของระบบ"
-	echo -e "|${GRAY}17${NC}| แก้ไขคอนฟิกต่างๆในระบบ"
+	echo -e "|${GRAY}17${NC}| แก้ไขคอนฟิกต่างๆของระบบ"
 	echo ""
 	echo -e "|${GRAY} 0${NC}| อัพเดตเมนูสคริปท์"
 	echo -e "|${GRAY}00${NC}| เปลี่ยนเป็นภาษาอังกฤษ"
 
 elif [[ ! -e /usr/local/bin/Check-Thai ]]; then
-	echo -e "MENU SCRIPT ${GRAY}✿.｡.:* *.:｡✿*ﾟ’ﾟ･✿.｡.:*${NC}"
+	echo -e "MENU SCRIPT ${PINK}O_O${NC}"
 	echo ""
 	echo -e "|${GRAY} 1${NC}| ADD NEW CLIENT FOR OPENVPN"
 	echo -e "|${GRAY} 2${NC}| ADD NEW CLIENT FOR SSH (HTTP)"
@@ -307,10 +305,7 @@ fi
 
 clear
 echo ""
-echo "  (\_(\ "
-echo " (=’ :’) :* Script by Mnm Ami"
-echo "  (,(”)(”) °.¸¸.•"
-echo ""
+echo "เซิฟเวอร์ โดย บอล"
 echo ""
 echo "ลำดับ   ชื่อบัญชีผู้ใช้        สถานะ      วันหมดอายุ"
 echo ""
@@ -339,7 +334,7 @@ done < /etc/passwd
 TOTAL="$(awk -F: '$3 >= '1000' && $1 != "nobody" {print $1}' /etc/passwd | wc -l)"
 echo ""
 echo ""
-echo -e "กำลังเชื่อมต่อ ${GREEN}$ON${NC}  |  ไม่ได้เชื่อมต่อ ${GRAY}$OFF${NC}  |  บัญชีทั้งหมด $TOTAL"
+echo -e "กำลังเชื่อมต่อ ${PINK}$ON${NC}  |  ไม่ได้เชื่อมต่อ ${GRAY}$OFF${NC}  |  บัญชีทั้งหมด $TOTAL"
 echo ""
 exit
 
@@ -439,9 +434,7 @@ fi
 
 clear
 echo ""
-echo "  (\_(\ "
-echo " (=’ :’) :* Script by Mnm Ami"
-echo "  (,(”)(”) °.¸¸.•"
+echo "เซิฟเวอร์ โดย บอล"
 echo ""
 echo -e "${GRAY}ตั้งค่าเวลารีบูทเซิฟเวอร์อัตโนมัติ ${NC} "
 echo ""
@@ -595,9 +588,7 @@ TXTOTAL=$(vnstat -i $INTERFACE | grep "tx:" | awk '{print $5" "substr ($9, 1, 1)
 
 clear
 echo ""
-echo "  (\_(\ "
-echo " (=’ :’) :* Script by Mnm Ami"
-echo "  (,(”)(”) °.¸¸.•"
+echo "เซิฟเวอร์ โดย บอล"
 echo ""
 if [[ -e /usr/local/bin/Check-Thai ]]; then
 	echo -e "แบนด์วิดท์ ${GRAY}✿.｡.:* *.:｡✿*ﾟ’ﾟ･✿.｡.:*${NC}"
@@ -821,7 +812,7 @@ exit
 
 if [[ ! -e /usr/local/bin/Banwidth-Per-Client ]]; then
 	apt-get install python
-	wget -O /usr/local/bin/Banwidth-Per-Client "https://raw.githubusercontent.com/nwqionm/OPENEXTRA/master/Banwidth-Per-Client"
+	wget -O /usr/local/bin/Banwidth-Per-Client "https://raw.githubusercontent.com/aritach/OPENEXTRA/master/Banwidth-Per-Client"
 	chmod +x /usr/local/bin/Banwidth-Per-Client
 	clear
 	echo ""
@@ -846,9 +837,7 @@ fi
 
 clear
 echo ""
-echo "  (\_(\ "
-echo " (=’ :’) :* Script by Mnm Ami"
-echo "  (,(”)(”) °.¸¸.•"
+echo "เซิฟเวอร์ โดย บอล"
 echo ""
 echo -e "${GRAY}ปรับเปลี่ยนระบบของเซิฟเวอร์ ${NC} "
 echo ""
@@ -926,9 +915,7 @@ fi
 
 clear
 echo ""
-echo "  (\_(\ "
-echo " (=’ :’) :* Script by Mnm Ami"
-echo "  (,(”)(”) °.¸¸.•"
+echo "เซิฟเวอร์ โดย บอล"
 echo ""
 echo -e "${GRAY}แบนและปลดแบนบัญชีผู้ใช้ ${NC} "
 echo ""
@@ -1010,9 +997,7 @@ esac
 
 clear
 echo ""
-echo "  (\_(\ "
-echo " (=’ :’) :* Script by Apiwat Panyoi"
-echo "  (,(”)(”) °.¸¸.• Edit the Script by Mnm Ami"
+echo "เซิฟเวอร์ โดย บอล"
 echo ""
 echo -e "${GRAY}ปรับความเร็วอินเตอร์เน็ต ${NC} "
 echo ""
@@ -1093,9 +1078,7 @@ esac
 
 clear
 echo ""
-echo "  (\_(\ "
-echo " (=’ :’) :* Script by Mnm Ami"
-echo "  (,(”)(”) °.¸¸.•"
+echo "เซิฟเวอร์ โดย บอล"
 echo ""
 echo -e "เปิด-ปิด-รีสตาร์ท การทำงานของระบบ ${GRAY}✿.｡.:* *.:｡✿*ﾟ’ﾟ･✿.｡.:*${NC}"
 echo ""
@@ -1320,9 +1303,7 @@ esac
 
 clear
 echo ""
-echo "  (\_(\ "
-echo " (=’ :’) :* Script by Mnm Ami"
-echo "  (,(”)(”) °.¸¸.•"
+echo "เซิฟเวอร์ โดย บอล"
 echo ""
 echo -e "แก้ไขคอนฟิกต่างๆในระบบ ${GRAY}✿.｡.:* *.:｡✿*ﾟ’ﾟ･✿.｡.:*${NC}"
 echo ""
