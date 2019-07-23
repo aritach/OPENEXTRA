@@ -7,9 +7,9 @@ cat /etc/shadow | cut -d: -f1,8 | sed /:$/d > /usr/local/bin/Expire-List
 TOTALACCOUNTS=`cat /usr/local/bin/Expire-List | wc -l`
 for((i=1; i<=$TOTALACCOUNTS; i++ ))
 	do
-	TCLIENTVAL=`head -n $i /usr/local/bin/Expire-List | tail -n 1`
-	CLIENT=`echo $TCLIENTVAL | cut -f1 -d:`
-	CLIENTEXP=`echo $TCLIENTVAL | cut -f2 -d:`
+	TCLIENTVAL=`head -n $i /usr/local/bin/Expire-List 
+	CLIENT=`echo $TCLIENTVAL
+	CLIENTEXP=`echo $TCLIENTVAL 
 	CLIENTEXPIREINSECONDS=$(( $CLIENTEXP * 86400 ))
 	TODAYSTIME=`date +%s`
 
