@@ -15,19 +15,12 @@ for((i=1; i<=$TOTALACCOUNTS; i++ ))
 
 	if [ $CLIENTEXPIREINSECONDS -ge $TODAYSTIME ] ; then
 		TIMETO1DAYS=$(( $TODAYSTIME + 86400 ))
-		TIMETO2DAYS=$(( $TODAYSTIME + 172800 ))
 			if [ $CLIENTEXPIREINSECONDS -le $TIMETO1DAYS ]; then
 				if [[ -e /usr/local/bin/Check-Thai ]]; then
 					echo -e "     ${GRAY}$CLIENT${NC} จะหมดอายุอีกไม่เกิน 24 ชั่วโมง"
 				elif [[ ! -e /usr/local/bin/Check-Thai ]]; then
 					echo -e "     ${GRAY}$CLIENT${NC} Will expire less more in 24 Hr."
-				fi
-			elif [ $CLIENTEXPIREINSECONDS -le $TIMETO2DAYS ]; then
-				if [[ -e /usr/local/bin/Check-Thai ]]; then
-					echo -e "     ${GRAY}$CLIENT${NC} จะหมดอายุอีกไม่เกิน 48 ชั่วโมง"
-				elif [[ ! -e /usr/local/bin/Check-Thai ]]; then
-					echo -e "     ${GRAY}$CLIENT${NC} Will expire less more in 48 Hr."
-				fi
+	
 			fi
 	else
 		if [[ $CHECKSYSTEM ]]; then
