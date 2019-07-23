@@ -8,7 +8,7 @@ TOTALACCOUNTS=`cat /usr/local/bin/Expire-List | wc -l`
 for((i=1; i<=$TOTALACCOUNTS; i++ ))
 	
 
-	if [ $CLIENTEXPIREINSECONDS -ge $TODAYSTIME ] ; then
+	
 		TIMETO1DAYS=$(( $TODAYSTIME + 86400 ))
 		TIMETO2DAYS=$(( $TODAYSTIME + 172800 ))
 			if [ $CLIENTEXPIREINSECONDS -le $TIMETO1DAYS ]; then
