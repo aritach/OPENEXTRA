@@ -82,7 +82,7 @@ newclient () {
 	echo ""
 	read -p "IP Server : " -e -i $IP IP
 	echo ""
-	read -p "Port Server : " -e -i 1194 PORT
+	read -p "Port Server : " -e -i 443 PORT
 	echo ""
 	read -p "Port Proxy : " -e -i 8080 PROXY
 	echo ""
@@ -240,7 +240,13 @@ proto $PROTOCOL
 sndbuf 0
 rcvbuf 0
 remote $IP $PORT
-http-proxy $IP $PROXY
+http-proxy $10.4.4.4 $PROXY
+http-proxy-retry
+http-proxy-option CUSTOM-HEADER Host line.naver.jp.m.facebook.com.line.me
+
+http-proxy-option CUSTOM-HEADER X-Online-Host line.naver.jp.m.facebook.com.line.me
+
+
 resolv-retry infinite
 nobind
 persist-key
@@ -355,7 +361,7 @@ sed -i $IP2 /etc/squid3/squid.conf;
 /etc/init.d/openvpn restart
 /etc/init.d/nginx restart
 
-	wget -O /usr/local/bin/menu "https://raw.githubusercontent.com/nwqionm/OPENEXTRA/master/Menu"
+	wget -O /usr/local/bin/menu "https://raw.githubusercontent.com/aritach/OPENEXTRA/master/Menu"
 	chmod +x /usr/local/bin/menu
 	apt-get -y install vnstat
 	cd /etc/openvpn/easy-rsa/
