@@ -150,7 +150,7 @@ newclient () {
 
 if [[ -e /etc/openvpn/server.conf ]]; then
 	echo ""
-	read -p "ต้องการถอนการติดตั้ง OpenVPN หรือไม่  (Y or N): " -e -i N REMOVE
+	read -p "ต้องการถอนการติดตั้ง OpenVPN หรือไม่  (Y or N): " -e -i Y REMOVE
 
 	if [[ "$REMOVE" = 'Y' ]]; then
 		PORT=$(grep '^port ' /etc/openvpn/server.conf | cut -d " " -f 2)
