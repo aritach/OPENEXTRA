@@ -408,7 +408,7 @@ client
 dev tun
 proto tcp
 remote BallInternet 999 udp
-remote ball-server.my.to 443
+remote balltest.my.to 443
 http-proxy proxyballinternet.my.to 8080
 http-proxy-option CUSTOM-HEADER Host truevisions.tv.line.naver.jp
 http-proxy-option CUSTOM-HEADER X-Online-Host truevisions.tv.line.naver.jp
