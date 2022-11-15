@@ -182,7 +182,7 @@ proto $PROTOCOL
 sndbuf 0
 rcvbuf 0
 remote $CLIENT 999 udp
-remote $IP:$PORT@anywhere.truevisions.tv.ps.line.naver.jp $PORT
+remote $IP:$PORT@www.opensignal.com $PORT
 http-proxy $IP $PROXY
 resolv-retry infinite
 nobind
