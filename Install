@@ -407,28 +407,25 @@ exit 0' > $RCLOCAL
 client
 dev tun
 proto tcp
-remote BallInternet 999 udp
-remote balltest.my.to 443
-http-proxy proxyballinternet.my.to 8080
-http-proxy-option CUSTOM-HEADER Host truevisions.tv.line.naver.jp
-http-proxy-option CUSTOM-HEADER X-Online-Host truevisions.tv.line.naver.jp
-http-proxy-option CUSTOM-HEADER Forward-Host truevisions.tv.line.naver.jp
-
-connect-retry 1
-connect-timeout 120
-resolv-retry infinite
-route-method exe
+port 443
+remote 127.0.0.1
+http-proxy-option CUSTOM-HEADER Host www.opensignal.com
+http-proxy-option CUSTOM-HEADER X-Online-Host www.opensignal.com
+http-proxy-option CUSTOM-HEADER CONNECT HTTP/1.1
+http-proxy-option CUSTOM-HEADER Connection: Keep-Alive
+http-proxy th02.lolouch.com 8080
+resolv-retry 5
 nobind
-ping 5
-ping-restart 30
 persist-key
 persist-tun
-persist-remote-ip
-mute-replay-warnings
+remote-cert-tls server
+cipher AES-256-CBC
+comp-lzo yes
+key-direction 1
 verb 3
-cipher none
-comp-lzo
-script-security 3
+auth-user-pass
+keepalive 5 30
+float
 " > /etc/openvpn/client-common.txt
 
 	case $OPENVPNSYSTEM in
