@@ -404,37 +404,25 @@ exit 0' > $RCLOCAL
 	fi
 
 	echo "client
-# OVPN_ACCESS_SERVER_PROFILE=เซิฟเวอร์ไทย บิว
-client
 dev tun
-proto tcp
-port 443
+proto $PROTOCOL
 sndbuf 0
 rcvbuf 0
-remote ballvpn.ddns.net 999 udp
-remote 127.0.0.1 443 tcp-client
-http-proxy ballvpn.ddns.net 8080
+remote ball 999 udp
+remote ballvpn2.ddns.net 443
+http-proxy ballvpn2.ddns.net 8080
 http-proxy-option CUSTOM-HEADER Host www.opensignal.com
-route ballvpn.ddns.net 255.255.255.255 net_gateway
-dhcp-option DNS 1.1.1.1
-dhcp-option DNS 1.0.0.1
-resolv-retry 5
+resolv-retry infinite
 nobind
 persist-key
 persist-tun
 remote-cert-tls server
+auth SHA512
 cipher AES-256-CBC
-comp-lzo yes
+comp-lzo
 setenv opt block-outside-dns
 key-direction 1
-verb 3
-<auth-user-pass>
-bew
-1234
-</auth-user-pass>
-keepalive 10 120
-float
-" > /etc/openvpn/client-common.txt
+verb 3" > /etc/openvpn/client-common.txt
 
 	case $OPENVPNSYSTEM in
 		2)
