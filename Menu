@@ -21,7 +21,7 @@ echo ""
 if [[ -e /usr/local/bin/Check-Thai ]]; then
 	echo -e "เมนู ${PINK}O_O${NC}"
 	echo ""
-	echo -e "|${GRAY} 1${NC}| OpenVPN"
+	echo -e "|${GRAY} 1${NC}| เพิ่มบัญชี OpenVPN"
 	echo -e "|${GRAY} 2${NC}| เพิ่มบัญชีผู้ใช้ SSH (HTTP)"
 	echo -e "|${GRAY} 3${NC}| ลบบัญชีผู้ใช้"
 	echo -e "|${GRAY} 4${NC}| บัญชีทั้้งหมด และ สมาชิกที่ออนไลน์"
