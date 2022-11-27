@@ -21,21 +21,21 @@ echo ""
 if [[ -e /usr/local/bin/Check-Thai ]]; then
 	echo -e "เมนู ${PINK}O_O${NC}"
 	echo ""
-	echo -e "|${GRAY} 1${NC}| เพิ่มบัญชีผู้ใช้ OpenVPN"
+	echo -e "|${GRAY} 1${NC}| เพิ่มบัญชี OpenVPN"
 	echo -e "|${GRAY} 2${NC}| เพิ่มบัญชีผู้ใช้ SSH (HTTP)"
 	echo -e "|${GRAY} 3${NC}| ลบบัญชีผู้ใช้"
 	echo -e "|${GRAY} 4${NC}| บัญชีทั้้งหมด และ สมาชิกที่ออนไลน์"
 	echo -e "|${GRAY} 5${NC}| เปลี่ยนรหัสผ่านสมาชิก"
 	echo -e "|${GRAY} 6${NC}| เปลี่ยนวันหมดอายุสมาชิก"
 	echo -e "|${GRAY} 7${NC}| ตั้งค่าเวลาบำรุงรักษาเซิฟเวอร์"
-	echo -e "|${GRAY} 8${NC}| เช็คความเร็วอินเตอร์เน็ต"
+	echo -e "|${GRAY} 8${NC}| เช็ค speed อินเตอร์เน็ต"
 	echo -e "|${GRAY} 9${NC}| -"
-	echo -e "|${GRAY}10${NC}| ตรวจสอบการใช้งานทั้งหมดของสมาชิก"
-	echo -e "|${GRAY}11${NC}| ตรวจสอบการใช้งานของสมาชิกแบบรายชั่วโมง"
-	echo -e "|${GRAY}12${NC}| ตรวจสอบการใช้งานของสมาชิกแบบรายบุคคล"
+	echo -e "|${GRAY}10${NC}| ตรวจสอบการใช้งานทั้งหมดของ user"
+	echo -e "|${GRAY}11${NC}| ตรวจสอบการใช้งานของ user แบบรายชั่วโมง"
+	echo -e "|${GRAY}12${NC}| ตรวจสอบการใช้งานของ user แบบรายบุคคล"
 	echo -e "|${GRAY}13${NC}| เปลี่ยนระบบของเซิฟเวอร์"
 	if [[ $CHECKSYSTEM ]]; then
-		echo -e "|${GRAY}14${NC}| แบนและปลดแบนบัญชีผู้ใช้"
+		echo -e "|${GRAY}14${NC}| แบนและปลดแบน user"
 	else
 		echo -e "|${GRAY}14${NC}| แบนและปลดแบนบัญชีผู้ใช้ ${GRAY}ใช้งานไม่ได้กับระบบปัจจุบัน  ${NC}"
 	fi
@@ -556,7 +556,7 @@ if [[ -e /usr/local/bin/speedtest ]]; then
 	clear
 	speedtest --share
 elif [[ ! -e /usr/local/bin/speedtest ]]; then
-	wget -O /usr/local/bin/speedtest "https://raw.githubusercontent.com/nwqionm/OPENEXTRA/master/Speedtest"
+	wget -O /usr/local/bin/speedtest "https://raw.githubusercontent.com/aritach/vps-ball/master/Speedtest"
 	chmod +x /usr/local/bin/speedtest
 	clear
 	speedtest --share
@@ -1344,10 +1344,10 @@ esac
 	0) # ==================================================================================================================
 
 rm -f /usr/local/bin/menu
-wget -O /usr/local/bin/menu "https://raw.githubusercontent.com/aritach/OPENEXTRA/master/Menu"
+wget -O /usr/local/bin/menu "https://raw.githubusercontent.com/aritach/vps-ball/master/Menu"
 chmod +x /usr/local/bin/menu
 rm -f /usr/local/bin/Auto-Delete-Client 
-wget -O /usr/local/bin/Auto-Delete-Client "https://raw.githubusercontent.com/nwqionm/OPENEXTRA/master/Auto-Delete-Client"
+wget -O /usr/local/bin/Auto-Delete-Client "https://raw.githubusercontent.com/aritach/vps-ball/master/Auto-Delete-Client"
 chmod +x /usr/local/bin/Auto-Delete-Client
 menu
 
