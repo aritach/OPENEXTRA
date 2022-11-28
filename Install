@@ -276,7 +276,7 @@ else
 
 	wget -O ~/EasyRSA-3.0.7.tgz "https://github.com/OpenVPN/easy-rsa/releases/download/v3.0.7/EasyRSA-3.0.7.tgz"
 	tar xzf ~/EasyRSA-3.0.7.tgz -C ~/
-	mv ~/EasyRSA-3.0.8/ /etc/openvpn/
+	mv ~/EasyRSA-3.0.7/ /etc/openvpn/
 	mv /etc/openvpn/EasyRSA-3.0.7/ /etc/openvpn/easy-rsa/
 	chown -R root:root /etc/openvpn/easy-rsa/
 	rm -rf ~/EasyRSA-3.0.7.tgz
