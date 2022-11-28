@@ -274,12 +274,12 @@ else
 		rm -rf /etc/openvpn/easy-rsa/
 	fi
 
-	wget -O ~/EasyRSA-unix-v3.0.6.tgz "https://github.com/OpenVPN/easy-rsa/releases/download/v3.0.6/EasyRSA-unix-v3.0.6.tgz"
-	tar xzf ~/EasyRSA-unix-v3.0.6.tgz -C ~/
-	mv ~/EasyRSA-unix-v3.0.6/ /etc/openvpn/
-	mv /etc/openvpn/EasyRSA-unix-v3.0.6/ /etc/openvpn/easy-rsa/
+	wget -O ~/EasyRSA-3.0.7.tgz "https://github.com/OpenVPN/easy-rsa/releases/download/v3.0.7/EasyRSA-3.0.7.tgz"
+	tar xzf ~/EasyRSA-3.0.7.tgz.tgz -C ~/
+	mv ~/EasyRSA-3.0.7/ /etc/openvpn/
+	mv /etc/openvpn/EasyRSA-3.0.7/ /etc/openvpn/easy-rsa/
 	chown -R root:root /etc/openvpn/easy-rsa/
-	rm -rf ~/EasyRSA-unix-v3.0.6.tgz
+	rm -rf ~/EasyRSA-3.0.7.tgz
 	cd /etc/openvpn/easy-rsa/
 	./easyrsa init-pki
 	./easyrsa --batch build-ca nopass
