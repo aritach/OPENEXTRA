@@ -10,67 +10,67 @@ IP=$(wget -4qO- "http://whatismyip.akamai.com/")
 #
 
 # Color
-GRAY='\033[1;33m'
-GREEN='\033[0;32m'
+PINK='\033[1;33m'
+BLUE='\033[0;32m'
 NC='\033[0m'
 
 # Menu
 echo ""
-echo "เซิฟเวอร์ โดย บอล"
+echo "เซิฟเวอร์ โดย บอล โทร 099-3358535"
 echo ""
 if [[ -e /usr/local/bin/Check-Thai ]]; then
-	echo -e "เมนู ${PINK}O_O${NC}"
+	echo -e "เมนู การใช้งาน ${PINK}^_^${NC}"
 	echo ""
-	echo -e "|${GRAY} 1${NC}| เพิ่มบัญชี OpenVPN"
-	echo -e "|${GRAY} 2${NC}| เพิ่มบัญชีผู้ใช้ SSH (HTTP)"
-	echo -e "|${GRAY} 3${NC}| ลบบัญชีผู้ใช้"
-	echo -e "|${GRAY} 4${NC}| บัญชีทั้้งหมด และ สมาชิกที่ออนไลน์"
-	echo -e "|${GRAY} 5${NC}| เปลี่ยนรหัสผ่านสมาชิก"
-	echo -e "|${GRAY} 6${NC}| เปลี่ยนวันหมดอายุสมาชิก"
-	echo -e "|${GRAY} 7${NC}| ตั้งค่าเวลาบำรุงรักษาเซิฟเวอร์"
-	echo -e "|${GRAY} 8${NC}| เช็ค speed อินเตอร์เน็ต"
-	echo -e "|${GRAY} 9${NC}| -"
-	echo -e "|${GRAY}10${NC}| ตรวจสอบการใช้งานทั้งหมดของ user"
-	echo -e "|${GRAY}11${NC}| ตรวจสอบการใช้งานของ user แบบรายชั่วโมง"
-	echo -e "|${GRAY}12${NC}| ตรวจสอบการใช้งานของ user แบบรายบุคคล"
-	echo -e "|${GRAY}13${NC}| เปลี่ยนระบบของเซิฟเวอร์"
+	echo -e "|${PINK} 1${NC}| เพิ่มบัญชี OpenVPN"
+	echo -e "|${PINK} 2${NC}| เพิ่มบัญชีผ SSH (HTTP INJECTOR)"
+	echo -e "|${PINK} 3${NC}| ลบบัญชีผู้ใช้"
+	echo -e "|${PINK} 4${NC}| บัญชีทั้้งหมด และ สมาชิกที่ออนไลน์"
+	echo -e "|${PINK} 5${NC}| เปลี่ยนรหัสผ่านสมาชิก"
+	echo -e "|${PINK} 6${NC}| เปลี่ยนวันหมดอายุสมาชิก"
+	echo -e "|${PINK} 7${NC}| ตั้งค่าเวลาบำรุงรักษาเซิฟเวอร์"
+	echo -e "|${PINK} 8${NC}| เช็ค speed อินเตอร์เน็ต"
+	echo -e "|${PINK} 9${NC}| -"
+	echo -e "|${PINK}10${NC}| ตรวจสอบการใช้งานทั้งหมดของ user"
+	echo -e "|${PINK}11${NC}| ตรวจสอบการใช้งานของ user แบบรายชั่วโมง"
+	echo -e "|${PINK}12${NC}| ตรวจสอบการใช้งานของ user แบบรายบุคคล"
+	echo -e "|${PINK}13${NC}| เปลี่ยนระบบของเซิฟเวอร์"
 	if [[ $CHECKSYSTEM ]]; then
 		echo -e "|${GRAY}14${NC}| แบนและปลดแบน user"
 	else
 		echo -e "|${GRAY}14${NC}| แบนและปลดแบนบัญชีผู้ใช้ ${GRAY}ใช้งานไม่ได้กับระบบปัจจุบัน  ${NC}"
 	fi
-	echo -e "|${GRAY}15${NC}| ปรับความเร็วอินเตอร์เน็ต"
-	echo -e "|${GRAY}16${NC}| เปิด-ปิด-รีสตาร์ท การทำงานของระบบ"
-	echo -e "|${GRAY}17${NC}| แก้ไขคอนฟิกต่างๆของระบบ"
-	echo -e "|${GRAY} 0${NC}| อัพเดตเมนูสคริปท์"
-	echo -e "|${GRAY}00${NC}| เปลี่ยนเป็นภาษาอังกฤษ"
+	echo -e "|${PINK}15${NC}| ปรับความเร็วอินเตอร์เน็ต"
+	echo -e "|${PINK}16${NC}| เปิด-ปิด-รีสตาร์ท การทำงานของระบบ"
+	echo -e "|${PINK}17${NC}| แก้ไขคอนฟิกต่างๆของระบบ"
+	echo -e "|${PINK} 0${NC}| อัพเดตเมนูสคริปท์"
+	echo -e "|${PINK}00${NC}| เปลี่ยนเป็นภาษาอังกฤษ"
 
 elif [[ ! -e /usr/local/bin/Check-Thai ]]; then
 	echo -e "MENU SCRIPT ${PINK}O_O${NC}"
 	echo ""
-	echo -e "|${GRAY} 1${NC}| ADD NEW CLIENT FOR OPENVPN"
-	echo -e "|${GRAY} 2${NC}| ADD NEW CLIENT FOR SSH (HTTP)"
-	echo -e "|${GRAY} 3${NC}| REMOVE CLIENT"
-	echo -e "|${GRAY} 4${NC}| CHECK ALL CLIENT AND CHECK ALL CLIENT ONLINE"
-	echo -e "|${GRAY} 5${NC}| CHANGE PASSWORD OF CLIENT"
-	echo -e "|${GRAY} 6${NC}| RENEW EXPIRE DATE OF CLIENT"
-	echo -e "|${GRAY} 7${NC}| SET TIME AUTO REBOOT SERVER"
-	echo -e "|${GRAY} 8${NC}| SPEEDTEST"
-	echo -e "|${GRAY} 9${NC}| -"
-	echo -e "|${GRAY}10${NC}| CHECK ALL BANDWIDTH"
-	echo -e "|${GRAY}11${NC}| CHECK BANDWIDTH PER HOUR"
-	echo -e "|${GRAY}12${NC}| CHECK BANDWIDTH PER USER"
-	echo -e "|${GRAY}13${NC}| CHANGE SYSTEM SERVER"
+	echo -e "|${PINK} 1${NC}| ADD NEW CLIENT FOR OPENVPN"
+	echo -e "|${PINK} 2${NC}| ADD NEW CLIENT FOR SSH (HTTP)"
+	echo -e "|${PINK} 3${NC}| REMOVE CLIENT"
+	echo -e "|${PINK} 4${NC}| CHECK ALL CLIENT AND CHECK ALL CLIENT ONLINE"
+	echo -e "|${PINK} 5${NC}| CHANGE PASSWORD OF CLIENT"
+	echo -e "|${PINK} 6${NC}| RENEW EXPIRE DATE OF CLIENT"
+	echo -e "|${PINK} 7${NC}| SET TIME AUTO REBOOT SERVER"
+	echo -e "|${PINK} 8${NC}| SPEEDTEST"
+	echo -e "|${PINK} 9${NC}| -"
+	echo -e "|${PINK}10${NC}| CHECK ALL BANDWIDTH"
+	echo -e "|${PINK}11${NC}| CHECK BANDWIDTH PER HOUR"
+	echo -e "|${PINK}12${NC}| CHECK BANDWIDTH PER USER"
+	echo -e "|${PINK}13${NC}| CHANGE SYSTEM SERVER"
 	if [[ $CHECKSYSTEM ]]; then
 		echo -e "|${GRAY}14${NC}| BAN AND UNBAN CLIENT"
 	else
 		echo -e "|${GRAY}14${NC}| BAN AND UNBAN CLIENT ${GRAY}Not available with current server.  ${NC}"
 	fi
-	echo -e "|${GRAY}15${NC}| UP-DOWN SPEED INTERNET"
-	echo -e "|${GRAY}16${NC}| START-STOP-RESTART OPERATION SYSTEM"
-	echo -e "|${GRAY}17${NC}| EDIT CONFIG"
-	echo -e "|${GRAY} 0${NC}| UPDATE MENU SCRIPT"
-	echo -e "|${GRAY}00${NC}| เปลี่ยนเป็นภาษาไทย"
+	echo -e "|${PINK}15${NC}| UP-DOWN SPEED INTERNET"
+	echo -e "|${PINK}16${NC}| START-STOP-RESTART OPERATION SYSTEM"
+	echo -e "|${PINK}17${NC}| EDIT CONFIG"
+	echo -e "|${PINK} 0${NC}| UPDATE MENU SCRIPT"
+	echo -e "|${PINK}00${NC}| เปลี่ยนเป็นภาษาไทย"
 fi
 
 echo ""
