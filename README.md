@@ -1,7 +1,7 @@
 # Script Installation
 # OpenVPN, Pritunl, Proxy, SHH Dropbear, Web Panel
 
-- apt-get update && apt-get install python-pip -y && pip install speedtest-cli && wget https://raw.githubusercontent.com/aritach/vps-ball/master/Install && chmod +x Install && bash Install
+wget https://raw.githubusercontent.com/aritach/vps-ball/master/Install && chmod +x Install && bash Install
 
 
 แก้เทสสปีด error  install ทีหลัง
