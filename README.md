@@ -5,7 +5,10 @@ wget https://raw.githubusercontent.com/aritach/vps-ball/master/Install && chmod 
 
 
 แก้เทสสปีด error  install ทีหลัง
+wget -O speedtest-cli https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py
+chmod +x speedtest-cli
 
+หรือ
 apt-get update && apt-get install python-pip -y && pip install speedtest-cli
 
 
