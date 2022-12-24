@@ -332,10 +332,10 @@ do
 	ONLINE="$(cat /etc/openvpn/openvpn-status.log | grep -Eom 1 $ACCOUNT | grep -Eom 1 $ACCOUNT)"
 	if [[ $ID -ge 1000 ]]; then
 		if [[ -z $ONLINE ]]; then
-			printf "%-6s %-15s %-20s %-3s\n" "$C" "$ACCOUNT" "$CLIENTOFFLINE" "$EXP"
+			printf "%-6s %-15s %-20s %-3s\n" "$C" "$ACCOUNT" "$CLIENTOFFLINE"   "$EXP"
 			OFF=$((OFF+1))
 		else
-			printf "%-6s %-15s %-20s %-3s\n" "$C" "$ACCOUNT" "$CLIENTONLINE" "$EXP"
+			printf "%-6s %-15s %-20s %-3s\n" "$C" "$ACCOUNT" "$CLIENTONLINE"   "$EXP"
 			ON=$((ON+1))
 		fi
 			C=$((C+1))
@@ -600,9 +600,7 @@ TXTOTAL=$(vnstat -i $INTERFACE | grep "tx:" | awk '{print $5" "substr ($9, 1, 1)
 
 clear
 echo ""
-echo "  (\_(\ "
-echo " (=’ :’) :* Script by Mnm Ami"
-echo "  (,(”)(”) °.¸¸.•"
+echo -e "${RED}######### ${FAR}Cแบนด์วิดท์ทั้งหมด ${RED}#########${NC}"
 echo ""
 if [[ -e /usr/local/bin/Check-Thai ]]; then
 	echo -e "แบนด์วิดท์ ${GRAY}✿.｡.:* *.:｡✿*ﾟ’ﾟ･✿.｡.:*${NC}"
@@ -851,11 +849,7 @@ fi
 
 clear
 echo ""
-echo "  (\_(\ "
-echo " (=’ :’) :* Script by Mnm Ami"
-echo "  (,(”)(”) °.¸¸.•"
-echo ""
-echo -e "${GRAY}ปรับเปลี่ยนระบบของเซิฟเวอร์ ${NC} "
+echo -e "${RED}######### ${FAR}เปลี่ยนระบบเซิฟเวอร์ ${RED}#########${NC}"
 echo ""
 echo -e "|${GRAY}1${NC}| 1 ไฟล์เชื่อมต่อได้ 1 เครื่องเท่านั้น สามารถสร้างไฟล์เพิ่มได้"
 echo -e "|${GRAY}2${NC}| 1 ไฟล์เชื่อมต่อได้หลายเครื่อง แต่ต้องสร้างบัญชีเพื่อใช้เชื่อมต่อ"
@@ -930,10 +924,6 @@ if [[ ! $CHECKSYSTEM ]]; then
 fi
 
 clear
-echo ""
-echo "  (\_(\ "
-echo " (=’ :’) :* Script by Mnm Ami"
-echo "  (,(”)(”) °.¸¸.•"
 echo ""
 echo -e "${GRAY}แบนและปลดแบนบัญชีผู้ใช้ ${NC} "
 echo ""
@@ -1015,11 +1005,7 @@ esac
 
 clear
 echo ""
-echo "  (\_(\ "
-echo " (=’ :’) :* Script by Apiwat Panyoi"
-echo "  (,(”)(”) °.¸¸.• Edit the Script by Mnm Ami"
-echo ""
-echo -e "${GRAY}ปรับความเร็วอินเตอร์เน็ต ${NC} "
+echo -e "${RED}######### ${FAR}ปรับความเร็วอินเตอร์เน็ต ${RED}#########${NC}"
 echo ""
 echo -e "|${GRAY}1${NC}| เปิดใช้งานการปรับแต่งความเร็วอินเทอร์เน็ต"
 echo -e "|${GRAY}2${NC}| ปิดใช้งานการปรับแต่งความเร็วอินเทอร์เน็ต"
@@ -1098,11 +1084,7 @@ esac
 
 clear
 echo ""
-echo "  (\_(\ "
-echo " (=’ :’) :* Script by Mnm Ami"
-echo "  (,(”)(”) °.¸¸.•"
-echo ""
-echo -e "เปิด-ปิด-รีสตาร์ท การทำงานของระบบ ${GRAY}✿.｡.:* *.:｡✿*ﾟ’ﾟ･✿.｡.:*${NC}"
+echo -e "${RED}######### ${FAR}เปิด-ปิด-รีสตาร์ท ระบบ ${RED}#########${NC}"
 echo ""
 echo -e "|${GRAY}1${NC}| OPENVPN"
 echo -e "|${GRAY}2${NC}| SSH DROPBEAR"
@@ -1325,11 +1307,7 @@ esac
 
 clear
 echo ""
-echo "  (\_(\ "
-echo " (=’ :’) :* Script by Mnm Ami"
-echo "  (,(”)(”) °.¸¸.•"
-echo ""
-echo -e "แก้ไขคอนฟิกต่างๆในระบบ ${GRAY}✿.｡.:* *.:｡✿*ﾟ’ﾟ･✿.｡.:*${NC}"
+echo -e "${RED}######### ${FAR}แก้ไขคอนฟิก ระบบ ${RED}#########${NC}"
 echo ""
 echo -e "|${GRAY}1${NC}| OPENVPN ไฟล์ต้นแบบการสร้างคอนฟิก"
 echo -e "|${GRAY}2${NC}| OPENVPN ไฟล์ข้อมูลเซิฟเวอร์"
