@@ -20,9 +20,9 @@ NC='\033[0m'
 # Menu
 echo ""
 echo -e ${BLUE}"================================================" 
-echo -e                ${RED}"บอล อินเตอร์เน็ต"
+echo -e ${RED}              "บอล อินเตอร์เน็ต"
 echo -e ${BLUE}"================================================"
-echo -e            ${YELLOW}"(,(”)(”) °.¸¸.•"
+echo -e ${YELLOW}           ปรับแต่งสคริป โดย บอล
 echo ""
 if [[ -e /usr/local/bin/Check-Thai ]]; then
 	echo -e "เมนูสคริปท์ ${PUPLE}✿.｡.:* *.:｡✿*ﾟ’ﾟ･✿.｡.:*${NC}"
@@ -112,9 +112,9 @@ echo ""
 bash Auto-Delete-Client
 echo ""
 if [[ -e /usr/local/bin/Check-Thai ]]; then
-	read -p ${YELLOW}"เลือกหัวข้อเมนูที่ต้องการใช้งาน : " MENU
+	read -p ${YELLOW} "เลือกหัวข้อเมนูที่ต้องการใช้งาน : " MENU
 elif [[ ! -e /usr/local/bin/Check-Thai ]]; then
-	read -p ${YELLOW}"Select a Menu Script : " MENU
+	read -p ${YELLOW} "Select a Menu Script : " MENU
 fi
 
 case $MENU in
