@@ -113,7 +113,7 @@ echo ""
 bash Auto-Delete-Client
 echo ""
 if [[ -e /usr/local/bin/Check-Thai ]]; then
-        read -p "เลือกเมนูที่ต้องการใช้งาน : " MENU
+        read -p "Select a Menu Script : " MENU
 elif [[ ! -e /usr/local/bin/Check-Thai ]]; then
 	read -p "Select a Menu Script : " MENU
 fi
