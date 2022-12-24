@@ -114,7 +114,7 @@ echo ""
 bash Auto-Delete-Client
 echo ""
 if [[ -e /usr/local/bin/Check-Thai ]]; then
-        read -p "Select a Menu Script : " MENU
+        read -p "เลือกหัวข้อเมนูที่ต้องการใช้งาน : " MENU
 elif [[ ! -e /usr/local/bin/Check-Thai ]]; then
 	read -p "Select a Menu Script : " MENU
 fi
@@ -130,7 +130,7 @@ if [[ $CHECKSYSTEM ]]; then
 	if [ $? -eq 0 ]; then
 		read -p "รหัสผ่าน : " -e PASSWORD
 		echo ""
-		echo -e "     ${GRAY}ระบุตัวเลข 30 จะทำให้บัญชีที่สร้างใช้งานไม่ได้ในอีก 30 วัน"
+		echo -e "     ${GRAY}ระบุตัวเลข 30 จะทำให้บัญชีที่สร้างใช้งานไม่ได้ในอีก 30 วัน${NC}"
 		read -p "กำหนดวันหมดอายุ : " -e TimeActive
 
 		PROXY=$(grep '^http_port ' /etc/squid/squid.conf | cut -d " " -f 2)
@@ -313,13 +313,12 @@ fi
 
 clear
 echo ""
-echo -e ${BLUE}"================================================" 
-echo -e ${RED}"             "บอล อินเตอร์เน็ต"                "
-echo -e ${BLUE}"================================================"
-echo -e ${YELLOW}"            ปรับแต่งสคริป โดย บอล           "
+echo "  (\_(\ "
+echo " (=’ :’) :* Script by Mnm Ami"
+echo "  (,(”)(”) °.¸¸.•"
 echo ""
 echo ""
-echo -e ${RED}"ลำดับ   ชื่อบัญชีผู้ใช้        สถานะ      วันหมดอายุ"
+echo "ลำดับ   ชื่อบัญชีผู้ใช้        สถานะ      วันหมดอายุ"
 echo ""
 C=1
 ON=0
@@ -346,7 +345,7 @@ done < /etc/passwd
 TOTAL="$(awk -F: '$3 >= '1000' && $1 != "nobody" {print $1}' /etc/passwd | wc -l)"
 echo ""
 echo ""
-echo -e "กำลังเชื่อมต่อ ${GREEN}$ON${NC}  |  ไม่ได้เชื่อมต่อ ${GRAY}$OFF${NC}  |  บัญชีทั้งหมด \033[1;36m$TOTAL"
+echo -e "กำลังเชื่อมต่อ ${GREEN}$ON${NC}  |  ไม่ได้เชื่อมต่อ ${GRAY}$OFF${NC}  |  บัญชีทั้งหมด $TOTAL"
 echo ""
 exit
 
@@ -446,10 +445,9 @@ fi
 
 clear
 echo ""
-echo -e ${BLUE}"================================================" 
-echo -e ${RED}"             "บอล อินเตอร์เน็ต"                "
-echo -e ${BLUE}"================================================"
-echo -e ${YELLOW}"            ปรับแต่งสคริป โดย บอล           "
+echo "  (\_(\ "
+echo " (=’ :’) :* Script by Mnm Ami"
+echo "  (,(”)(”) °.¸¸.•"
 echo ""
 echo -e "${GRAY}ตั้งค่าเวลารีบูทเซิฟเวอร์อัตโนมัติ ${NC} "
 echo ""
@@ -603,13 +601,12 @@ TXTOTAL=$(vnstat -i $INTERFACE | grep "tx:" | awk '{print $5" "substr ($9, 1, 1)
 
 clear
 echo ""
-echo -e ${BLUE}"================================================" 
-echo -e ${RED}"             "บอล อินเตอร์เน็ต"                "
-echo -e ${BLUE}"================================================"
-echo -e ${YELLOW}"            ปรับแต่งสคริป โดย บอล           "
+echo "  (\_(\ "
+echo " (=’ :’) :* Script by Mnm Ami"
+echo "  (,(”)(”) °.¸¸.•"
 echo ""
 if [[ -e /usr/local/bin/Check-Thai ]]; then
-	echo -e "เมนูสคริปท์ ${PUPLE}✿.｡.:* *.:｡✿*ﾟ’ﾟ･✿.｡.:*${NC}"
+	echo -e "แบนด์วิดท์ ${GRAY}✿.｡.:* *.:｡✿*ﾟ’ﾟ･✿.｡.:*${NC}"
 	echo ""
 	echo -e "วันนี้ ${GRAY}$TODAY${NC}"
 	echo -e "เมื่อวานนี้ ${GRAY}$YESTERDAY${NC}"
@@ -855,11 +852,9 @@ fi
 
 clear
 echo ""
-echo -e ${BLUE}"================================================" 
-echo -e ${RED}"             "บอล อินเตอร์เน็ต"                "
-echo -e ${BLUE}"================================================"
-echo -e ${YELLOW}"            ปรับแต่งสคริป โดย บอล           "
-echo ""
+echo "  (\_(\ "
+echo " (=’ :’) :* Script by Mnm Ami"
+echo "  (,(”)(”) °.¸¸.•"
 echo ""
 echo -e "${GRAY}ปรับเปลี่ยนระบบของเซิฟเวอร์ ${NC} "
 echo ""
@@ -937,10 +932,9 @@ fi
 
 clear
 echo ""
-echo -e ${BLUE}"================================================" 
-echo -e ${RED}"             "บอล อินเตอร์เน็ต"                "
-echo -e ${BLUE}"================================================"
-echo -e ${YELLOW}"            ปรับแต่งสคริป โดย บอล           "
+echo "  (\_(\ "
+echo " (=’ :’) :* Script by Mnm Ami"
+echo "  (,(”)(”) °.¸¸.•"
 echo ""
 echo -e "${GRAY}แบนและปลดแบนบัญชีผู้ใช้ ${NC} "
 echo ""
@@ -1022,10 +1016,9 @@ esac
 
 clear
 echo ""
-echo -e ${BLUE}"================================================" 
-echo -e ${RED}"             "บอล อินเตอร์เน็ต"                "
-echo -e ${BLUE}"================================================"
-echo -e ${YELLOW}"            ปรับแต่งสคริป โดย บอล           "
+echo "  (\_(\ "
+echo " (=’ :’) :* Script by Apiwat Panyoi"
+echo "  (,(”)(”) °.¸¸.• Edit the Script by Mnm Ami"
 echo ""
 echo -e "${GRAY}ปรับความเร็วอินเตอร์เน็ต ${NC} "
 echo ""
@@ -1106,10 +1099,9 @@ esac
 
 clear
 echo ""
-echo -e ${BLUE}"================================================" 
-echo -e ${RED}"             "บอล อินเตอร์เน็ต"                "
-echo -e ${BLUE}"================================================"
-echo -e ${YELLOW}"            ปรับแต่งสคริป โดย บอล           "
+echo "  (\_(\ "
+echo " (=’ :’) :* Script by Mnm Ami"
+echo "  (,(”)(”) °.¸¸.•"
 echo ""
 echo -e "เปิด-ปิด-รีสตาร์ท การทำงานของระบบ ${GRAY}✿.｡.:* *.:｡✿*ﾟ’ﾟ･✿.｡.:*${NC}"
 echo ""
@@ -1334,10 +1326,9 @@ esac
 
 clear
 echo ""
-echo -e ${BLUE}"================================================" 
-echo -e ${RED}"             "บอล อินเตอร์เน็ต"                "
-echo -e ${BLUE}"================================================"
-echo -e ${YELLOW}"            ปรับแต่งสคริป โดย บอล           "
+echo "  (\_(\ "
+echo " (=’ :’) :* Script by Mnm Ami"
+echo "  (,(”)(”) °.¸¸.•"
 echo ""
 echo -e "แก้ไขคอนฟิกต่างๆในระบบ ${GRAY}✿.｡.:* *.:｡✿*ﾟ’ﾟ･✿.｡.:*${NC}"
 echo ""
