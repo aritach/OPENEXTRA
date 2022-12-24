@@ -16,7 +16,7 @@ BLUE='\033[1;34m'
 RED='\033[1;31m'
 YELLOW='\033[1;33m'
 #NC='\033[0m'
-NC='\033[1;33m'
+#NC='\033[1;33m'
 
 # Menu
 echo ""
@@ -115,7 +115,7 @@ echo ""
 bash Auto-Delete-Client
 echo ""
 if [[ -e /usr/local/bin/Check-Thai ]]; then
-	read -ne "${GRAY}เลือกหัวข้อเมนูที่ต้องการใช้งาน : "; MENU
+	read -p "${GRAY}เลือกหัวข้อเมนูที่ต้องการใช้งาน : " MENU
 elif [[ ! -e /usr/local/bin/Check-Thai ]]; then
 	read -p "Select a Menu Script : " MENU
 fi
