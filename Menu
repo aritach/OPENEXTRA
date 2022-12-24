@@ -51,7 +51,8 @@ if [[ -e /usr/local/bin/Check-Thai ]]; then
 	echo -e "${RED}|${GREEN}17${RED}| \033[1;36mแก้ไขคอนฟิกต่างๆในระบบ"
 	echo ""
 	echo -e "${RED}|${GREEN} 0${RED}| \033[1;36mอัพเดตเมนูสคริปท์"
-	echo -e "${RED}|${GREEN}00${RED}| \033[1;36mเปลี่ยนเป็นภาษาอังกฤษ"	
+	echo -e "${RED}|${GREEN}00${RED}| \033[1;36mเปลี่ยนเป็นภาษาอังกฤษ"
+echo -e ${BLUE}"--------------------------------------------"
 
 elif [[ ! -e /usr/local/bin/Check-Thai ]]; then
 	echo -e "MENU SCRIPT ${GRAY}✿.｡.:* *.:｡✿*ﾟ’ﾟ･✿.｡.:*${NC}"
@@ -113,7 +114,7 @@ echo ""
 bash Auto-Delete-Client
 echo ""
 if [[ -e /usr/local/bin/Check-Thai ]]; then
-        read -p "เมนู : " MENU
+        read -p "Select a Menu Script : " MENU
 elif [[ ! -e /usr/local/bin/Check-Thai ]]; then
 	read -p "Select a Menu Script : " MENU
 fi
