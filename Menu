@@ -52,6 +52,8 @@ if [[ -e /usr/local/bin/Check-Thai ]]; then
 	echo ""
 	echo -e "|${GRAY} 0${RED}| \033[1;36mอัพเดตเมนูสคริปท์"
 	echo -e "|${GRAY}00${RED}| \033[1;36mเปลี่ยนเป็นภาษาอังกฤษ"
+echo ""
+echo -e ${BLUE}"================================================" 	
 
 elif [[ ! -e /usr/local/bin/Check-Thai ]]; then
 	echo -e "MENU SCRIPT ${GRAY}✿.｡.:* *.:｡✿*ﾟ’ﾟ･✿.｡.:*${NC}"
