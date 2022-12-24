@@ -24,7 +24,7 @@ echo ""
 if [[ -e /usr/local/bin/Check-Thai ]]; then
 	echo -e "เมนูสคริปท์ ${GRAY}✿.｡.:* *.:｡✿*ﾟ’ﾟ･✿.｡.:*${NC}"
 	echo ""
-	echo -e "|${GRAY} 1${NC}| \033[1;31mเพิ่มบัญชีผู้ใช้ OpenVPN"
+	echo -e "|${GRAY} 1${NC}| \033[1;31mเพิ่มบัญชี OpenVPN"
 	echo -e "|${GRAY} 2${NC}| \033[1;31mเพิ่มบัญชีผู้ใช้ SSH (HTTP)"
 	echo -e "|${GRAY} 3${NC}| \033[1;31mลบบัญชีผู้ใช้"
 	echo -e "|${GRAY} 4${NC}| \033[1;31mตรวจสอบบัญชีผู้ใช้ทั้งหมด และตรวจสอบบัญชีที่กำลังเชื่อมต่อ"
