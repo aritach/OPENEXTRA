@@ -10,7 +10,7 @@ IP=$(wget -4qO- "http://whatismyip.akamai.com/")
 #
 
 # Color
-RED='\033[1;31m'
+PINK='\033[1;31m'
 GRAY='\033[1;33m'
 GREEN='\033[0;32m'
 NC='\033[0m'
