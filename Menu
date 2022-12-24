@@ -11,7 +11,7 @@ IP=$(wget -4qO- "http://whatismyip.akamai.com/")
 
 # Color
 GRAY='\033[1;32m'
-GREEN='\033[1;32m'
+PUPLE='\033[1;35m'
 NC='\033[0m'
 
 # Menu
@@ -21,7 +21,7 @@ echo " (=’ :’) :* Script by Mnm Ami"
 echo "  (,(”)(”) °.¸¸.•"
 echo ""
 if [[ -e /usr/local/bin/Check-Thai ]]; then
-	echo -e "เมนูสคริปท์ ${GRAY}✿.｡.:* *.:｡✿*ﾟ’ﾟ･✿.｡.:*${NC}"
+	echo -e "เมนูสคริปท์ ${PUPLE}✿.｡.:* *.:｡✿*ﾟ’ﾟ･✿.｡.:*${NC}"
 	echo ""
 	echo -e "|${GRAY} 1${NC}| \033[1;36mเพิ่มบัญชี OpenVPN"
 	echo -e "|${GRAY} 2${NC}| \033[1;36mเพิ่มบัญชีผู้ใช้ SSH (HTTP)"
