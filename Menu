@@ -314,9 +314,7 @@ fi
 
 clear
 echo ""
-echo "  (\_(\ "
-echo " (=’ :’) :* Script by Mnm Ami"
-echo "  (,(”)(”) °.¸¸.•"
+echo "${PUPLE}######### ${GRAY}เมนูสคริป ${PUPLE}#########${NC}"
 echo ""
 echo ""
 echo "ลำดับ   ชื่อบัญชีผู้ใช้        สถานะ      วันหมดอายุ"
