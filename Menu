@@ -314,10 +314,13 @@ fi
 
 clear
 echo ""
-echo "  (\_(\ "
-echo " (=’ :’) :* Script by Mnm Ami"
-echo "  (,(”)(”) °.¸¸.•"
+echo -e ${BLUE}"================================================" 
+echo -e ${RED}"             "บอล อินเตอร์เน็ต"                "
+echo -e ${BLUE}"================================================"
+echo -e ${YELLOW}"            ปรับแต่งสคริป โดย บอล           "
 echo ""
+if [[ -e /usr/local/bin/Check-Thai ]]; then
+	echo -e "เมนูสคริปท์ ${PUPLE}✿.｡.:* *.:｡✿*ﾟ’ﾟ･✿.｡.:*${NC}"
 echo ""
 echo "ลำดับ   ชื่อบัญชีผู้ใช้        สถานะ      วันหมดอายุ"
 echo ""
@@ -446,10 +449,13 @@ fi
 
 clear
 echo ""
-echo "  (\_(\ "
-echo " (=’ :’) :* Script by Mnm Ami"
-echo "  (,(”)(”) °.¸¸.•"
+echo -e ${BLUE}"================================================" 
+echo -e ${RED}"             "บอล อินเตอร์เน็ต"                "
+echo -e ${BLUE}"================================================"
+echo -e ${YELLOW}"            ปรับแต่งสคริป โดย บอล           "
 echo ""
+if [[ -e /usr/local/bin/Check-Thai ]]; then
+	echo -e "เมนูสคริปท์ ${PUPLE}✿.｡.:* *.:｡✿*ﾟ’ﾟ･✿.｡.:*${NC}"
 echo -e "${GRAY}ตั้งค่าเวลารีบูทเซิฟเวอร์อัตโนมัติ ${NC} "
 echo ""
 echo -e "|${GRAY}1${NC}| รีบูททุกๆ  1 ชั่วโมง"
@@ -602,12 +608,13 @@ TXTOTAL=$(vnstat -i $INTERFACE | grep "tx:" | awk '{print $5" "substr ($9, 1, 1)
 
 clear
 echo ""
-echo "  (\_(\ "
-echo " (=’ :’) :* Script by Mnm Ami"
-echo "  (,(”)(”) °.¸¸.•"
+echo -e ${BLUE}"================================================" 
+echo -e ${RED}"             "บอล อินเตอร์เน็ต"                "
+echo -e ${BLUE}"================================================"
+echo -e ${YELLOW}"            ปรับแต่งสคริป โดย บอล           "
 echo ""
 if [[ -e /usr/local/bin/Check-Thai ]]; then
-	echo -e "แบนด์วิดท์ ${GRAY}✿.｡.:* *.:｡✿*ﾟ’ﾟ･✿.｡.:*${NC}"
+	echo -e "เมนูสคริปท์ ${PUPLE}✿.｡.:* *.:｡✿*ﾟ’ﾟ･✿.｡.:*${NC}"
 	echo ""
 	echo -e "วันนี้ ${GRAY}$TODAY${NC}"
 	echo -e "เมื่อวานนี้ ${GRAY}$YESTERDAY${NC}"
@@ -853,9 +860,13 @@ fi
 
 clear
 echo ""
-echo "  (\_(\ "
-echo " (=’ :’) :* Script by Mnm Ami"
-echo "  (,(”)(”) °.¸¸.•"
+echo -e ${BLUE}"================================================" 
+echo -e ${RED}"             "บอล อินเตอร์เน็ต"                "
+echo -e ${BLUE}"================================================"
+echo -e ${YELLOW}"            ปรับแต่งสคริป โดย บอล           "
+echo ""
+if [[ -e /usr/local/bin/Check-Thai ]]; then
+	echo -e "เมนูสคริปท์ ${PUPLE}✿.｡.:* *.:｡✿*ﾟ’ﾟ･✿.｡.:*${NC}"
 echo ""
 echo -e "${GRAY}ปรับเปลี่ยนระบบของเซิฟเวอร์ ${NC} "
 echo ""
@@ -933,10 +944,13 @@ fi
 
 clear
 echo ""
-echo "  (\_(\ "
-echo " (=’ :’) :* Script by Mnm Ami"
-echo "  (,(”)(”) °.¸¸.•"
+echo -e ${BLUE}"================================================" 
+echo -e ${RED}"             "บอล อินเตอร์เน็ต"                "
+echo -e ${BLUE}"================================================"
+echo -e ${YELLOW}"            ปรับแต่งสคริป โดย บอล           "
 echo ""
+if [[ -e /usr/local/bin/Check-Thai ]]; then
+	echo -e "เมนูสคริปท์ ${PUPLE}✿.｡.:* *.:｡✿*ﾟ’ﾟ･✿.｡.:*${NC}"
 echo -e "${GRAY}แบนและปลดแบนบัญชีผู้ใช้ ${NC} "
 echo ""
 echo -e "|${GRAY}1${NC}| แบนบัญชีผู้ใช้"
@@ -1017,9 +1031,13 @@ esac
 
 clear
 echo ""
-echo "  (\_(\ "
-echo " (=’ :’) :* Script by Apiwat Panyoi"
-echo "  (,(”)(”) °.¸¸.• Edit the Script by Mnm Ami"
+echo -e ${BLUE}"================================================" 
+echo -e ${RED}"             "บอล อินเตอร์เน็ต"                "
+echo -e ${BLUE}"================================================"
+echo -e ${YELLOW}"            ปรับแต่งสคริป โดย บอล           "
+echo ""
+if [[ -e /usr/local/bin/Check-Thai ]]; then
+	echo -e "เมนูสคริปท์ ${PUPLE}✿.｡.:* *.:｡✿*ﾟ’ﾟ･✿.｡.:*${NC}"
 echo ""
 echo -e "${GRAY}ปรับความเร็วอินเตอร์เน็ต ${NC} "
 echo ""
@@ -1100,10 +1118,13 @@ esac
 
 clear
 echo ""
-echo "  (\_(\ "
-echo " (=’ :’) :* Script by Mnm Ami"
-echo "  (,(”)(”) °.¸¸.•"
+echo -e ${BLUE}"================================================" 
+echo -e ${RED}"             "บอล อินเตอร์เน็ต"                "
+echo -e ${BLUE}"================================================"
+echo -e ${YELLOW}"            ปรับแต่งสคริป โดย บอล           "
 echo ""
+if [[ -e /usr/local/bin/Check-Thai ]]; then
+	echo -e "เมนูสคริปท์ ${PUPLE}✿.｡.:* *.:｡✿*ﾟ’ﾟ･✿.｡.:*${NC}"
 echo -e "เปิด-ปิด-รีสตาร์ท การทำงานของระบบ ${GRAY}✿.｡.:* *.:｡✿*ﾟ’ﾟ･✿.｡.:*${NC}"
 echo ""
 echo -e "|${GRAY}1${NC}| OPENVPN"
@@ -1327,10 +1348,13 @@ esac
 
 clear
 echo ""
-echo "  (\_(\ "
-echo " (=’ :’) :* Script by Mnm Ami"
-echo "  (,(”)(”) °.¸¸.•"
+echo -e ${BLUE}"================================================" 
+echo -e ${RED}"             "บอล อินเตอร์เน็ต"                "
+echo -e ${BLUE}"================================================"
+echo -e ${YELLOW}"            ปรับแต่งสคริป โดย บอล           "
 echo ""
+if [[ -e /usr/local/bin/Check-Thai ]]; then
+	echo -e "เมนูสคริปท์ ${PUPLE}✿.｡.:* *.:｡✿*ﾟ’ﾟ･✿.｡.:*${NC}"
 echo -e "แก้ไขคอนฟิกต่างๆในระบบ ${GRAY}✿.｡.:* *.:｡✿*ﾟ’ﾟ･✿.｡.:*${NC}"
 echo ""
 echo -e "|${GRAY}1${NC}| OPENVPN ไฟล์ต้นแบบการสร้างคอนฟิก"
