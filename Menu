@@ -860,7 +860,7 @@ sed -i '28d' /etc/openvpn/server.conf
 sed -i '20d' /etc/openvpn/client-common.txt
 echo "client-to-client" >> /etc/openvpn/server.conf
 echo ""
-echo -e "${GREEN}ปรับเปลี่ยนระบบของเซิฟเวอร์เป็นรูปแบบที่ 1 เรียบร้อย"
+echo -e "${GREEN}ปรับเปลี่ยนระบบของเซิฟเวอร์เป็นรูปแบบที่ 1 เรียบร้อย${NC}"
 echo ""
 service openvpn restart
 
@@ -883,7 +883,7 @@ else
 fi
 echo "auth-user-pass" >> /etc/openvpn/client-common.txt
 echo ""
-echo -e "${GREEN}ปรับเปลี่ยนระบบของเซิฟเวอร์เป็นรูปแบบที่ 2 เรียบร้อย"
+echo -e "${GREEN}ปรับเปลี่ยนระบบของเซิฟเวอร์เป็นรูปแบบที่ 2 เรียบร้อย${NC}"
 echo ""
 service openvpn restart
 
@@ -897,7 +897,7 @@ sed -i '28d' /etc/openvpn/server.conf
 sed -i '20d' /etc/openvpn/client-common.txt
 echo "duplicate-cn" >> /etc/openvpn/server.conf
 echo ""
-echo -e "${GREEN}ปรับเปลี่ยนระบบของเซิฟเวอร์เป็นรูปแบบที่ 3 เรียบร้อย"
+echo -e "${GREEN}ปรับเปลี่ยนระบบของเซิฟเวอร์เป็นรูปแบบที่ 3 เรียบร้อย${NC}"
 echo ""
 service openvpn restart
 
