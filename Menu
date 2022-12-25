@@ -126,7 +126,7 @@ case $MENU in
 
 if [[ $CHECKSYSTEM ]]; then
 	echo ""
-	read -p "ชื่อบัญชีที่ต้องการสร้าง : " -e CLIENT
+	read -p "Add user : " -e CLIENT
 
 	if [ $? -eq 0 ]; then
 		read -p "รหัสผ่าน : " -e PASSWORD
@@ -167,7 +167,7 @@ if [[ $CHECKSYSTEM ]]; then
 else
 
 	echo ""
-	read -p "ชื่อบัญชีที่ต้องการสร้าง : " -e CLIENT
+	read -p "Add user : " -e CLIENT
 
 	if [[ -e /etc/openvpn/easy-rsa/pki/private/$CLIENT.key ]]; then
 		echo ""
@@ -230,7 +230,7 @@ fi
 	2) # ==================================================================================================================
 
 	echo ""
-	read -p "ชื่อบัญชีที่ต้องการสร้าง : " -e CLIENT
+	read -p "Add user : " -e CLIENT
 
 	if [ $? -eq 0 ]; then
 		read -p "รหัสผ่าน : " -e PASSWORD
