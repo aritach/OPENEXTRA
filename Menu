@@ -395,7 +395,7 @@ exit
 	6) # ==================================================================================================================
 
 echo ""
-read -p "ชื่อบัญชีที่ต้องการเปลี่ยนวันหมดอายุ : " -e CLIENT
+read -p "Select username : " -e CLIENT
 
 if [ $? -eq 0 ]; then
 	EXP="$(chage -l $CLIENT | grep "Account expires" | awk -F": " '{print $2}')"
@@ -923,7 +923,7 @@ echo ""
 echo -e "|${GRAY}1${NC}| แบนบัญชีผู้ใช้"
 echo -e "|${GRAY}2${NC}| ปลดแบนบัญชีผู้ใช้"
 echo ""
-read -p "เลือกหัวข้อที่ต้องการใช้งาน : " BandUB
+read -p "Select a Menu Script : " BandUB
 
 case $BandUB in
 
@@ -1003,7 +1003,7 @@ echo ""
 echo -e "${RED}|${GREEN}1${RED}| ${FAR}เปิดใช้งานการปรับแต่งความเร็วอินเทอร์เน็ต"
 echo -e "${RED}|${GREEN}2${RED}| ${FAR}ปิดใช้งานการปรับแต่งความเร็วอินเทอร์เน็ต"
 echo ""
-read -p "เลือกหัวข้อที่ต้องการใช้งาน : " LIMITINTERNET
+read -p "Select a Menu Script : " LIMITINTERNET
 
 case $LIMITINTERNET in
 
@@ -1094,7 +1094,7 @@ case $SERVICE in
 	echo -e "	${RED}|${GREEN}2${RED}| ${FAR}ปิด"
 	echo -e "	${RED}|${GREEN}3${RED}| ${FAR}รีสตาร์ท"
 	echo ""
-	read -p "	เลือกหัวข้อที่ต้องการใช้งาน : " SERVICEOPENVPN
+	read -p "	Select a Menu Script : " SERVICEOPENVPN
 
 	case $SERVICEOPENVPN in
 
@@ -1133,7 +1133,7 @@ case $SERVICE in
 	echo -e "	${RED}|${GREEN}2${RED}| ${FAR}ปิด ${GRAY}หากปิดการทำงานจะไม่สามารถเข้าสู่เทอมินอลได้ ${NC} "
 	echo -e "	${RED}|${GREEN}3${RED}| ${FAR}รีสตาร์ท"
 	echo ""
-	read -p "	เลือกหัวข้อที่ต้องการใช้งาน : " SERVICEDROPBEAR
+	read -p "	Select a Menu Script : " SERVICEDROPBEAR
 
 	case $SERVICEDROPBEAR in
 
@@ -1194,7 +1194,7 @@ case $SERVICE in
 	echo -e "	${RED}|${GREEN}2${RED}| ${FAR}ปิด"
 	echo -e "	${RED}|${GREEN}3${RED}| ${FAR}รีสตาร์ท"
 	echo ""
-	read -p "	เลือกหัวข้อที่ต้องการใช้งาน : " SERVICEPROXY
+	read -p "	Select a Menu Script : " SERVICEPROXY
 
 	case $SERVICEPROXY in
 
@@ -1308,7 +1308,7 @@ echo -e "${RED}|${GREEN}3${RED}| ${FAR}SQUID PROXY ไฟล์รายละ�
 echo -e "${RED}|${GREEN}4${RED}| ${FAR}MENU ไฟล์สคริปท์ของเมนู "
 echo ""
 echo ""
-read -p "เลือกหัวข้อที่ต้องการใช้งาน : " EDIT
+read -p "Select a Menu Script : " EDIT
 
 case $EDIT in
 
