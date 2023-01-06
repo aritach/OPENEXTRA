@@ -317,7 +317,7 @@ echo ""
 echo -e "${RED}######### ${FAR}ผู้ใช้งานทั้งหมด ${RED}#########${NC}"
 echo ""
 echo ""
-echo -e "ลำดับ   ชื่อบัญชีผู้ใช้        สถานะ      วันหมดอายุ"
+echo -e "${FAR}ลำดับ   ชื่อบัญชีผู้ใช้        สถานะ      วันหมดอายุ ${NC}"
 echo ""
 C=1
 ON=0
@@ -344,7 +344,7 @@ done < /etc/passwd
 TOTAL="$(awk -F: '$3 >= '1000' && $1 != "nobody" {print $1}' /etc/passwd | wc -l)"
 echo ""
 echo ""
-echo -e "กำลังเชื่อมต่อ ${GREEN}$ON${NC}  |  ไม่ได้เชื่อมต่อ ${GRAY}$OFF${NC}  |  บัญชีทั้งหมด $TOTAL"
+echo -e "กำลังเชื่อมต่อ ${GREEN}$ON${NC}  |  ไม่ได้เชื่อมต่อ ${GRAY}$OFF${NC}  |  บัญชีทั้งหมด ${FAR}$TOTAL${NC}"
 echo ""
 exit
 
